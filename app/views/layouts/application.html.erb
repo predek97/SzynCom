@@ -12,13 +12,33 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-    <%= link_to current_user.email, edit_user_registration_path %>
-    <%= link_to 'Log out', destroy_user_session_path %>
-    <% else %>
-    <%= link_to 'Sign in', new_user_session_path %>
-    <%= link_to 'Sign up', new_user_registration_path %>
-    <% end %>
+<!-- nav bar -->
+<div class="top-bar topbar-center-logo" id="topbar-center-logo">
+  <div class="top-bar-left">
+    <ul class="menu vertical medium-horizontal">
+      <li>new conv placehold    </li>
+      <li>    </li>
+    </ul>
+  </div>
+  <div class="top-bar-center">
+    <a href="#"><img src="https://placehold.it/100x39" alt="logo placeholder" /></a>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu vertical medium-horizontal">
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.email, edit_user_registration_path %></li>
+        <li><%= link_to 'Log out', destroy_user_session_path %></li>
+      <% else %>
+        <li><%= link_to 'Sign in', new_user_session_path %></li>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<!-- /medium and larger nav bar -->
+
+
+    
     <%= yield %>
 
   </body>
