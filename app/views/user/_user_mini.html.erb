@@ -1,0 +1,36 @@
+
+<% user = locals[:user]%>
+
+<div class="card profile-card-action-icons">
+  <div class="card-section">
+    <div class="profile-card-header">
+      <div class="profile-card-avatar">
+        <img class="avatar-image" src="https://i.imgur.com/3AeQRbR.jpg" alt="<%= user.name %> avatar">
+      </div>
+      <div class="profile-card-author">
+        <h5 class="author-title"><%= link_to user.name, user.name%></h5>
+        <p class="author-description">desc</p>
+      </div>
+    </div>
+    <div class="profile-card-action">
+      <div class="action-area">
+        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="<%= "Message #{user.name}" %>">
+          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+            <%= "Message #{user.name}" %>
+        </a>
+      </div>
+      <div class="action-area">
+        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="<%= "Add #{user.name} to friends" %>">
+          <i class="fa fa-user-plus" aria-hidden="true"></i>
+            <%= "Add #{user.name} to friends" %>
+        </a>
+      </div>
+      <div class="action-area">
+        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="<%= "Block #{user.name}! "%>">
+            <%= "Block #{user.name}! "%>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
